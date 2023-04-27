@@ -163,9 +163,6 @@ Reg add "HKLM\zSOFTWARE\Microsoft\Windows\CurrentVersion\ReserveManager" /v "Shi
 echo Disabling Chat icon:
 Reg add "HKLM\zSOFTWARE\Policies\Microsoft\Windows\Windows Chat" /v "ChatIcon" /t REG_DWORD /d "3" /f >nul 2>&1
 Reg add "HKLM\zNTUSER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarMn" /t REG_DWORD /d "0" /f >nul 2>&1
-echo Disabling Edge icon:
-Reg add "HKLM\zSOFTWARE\Policies\Microsoft\EdgeUpdate" /v "CreateDesktopShortcutDefault" /t REG_DWORD /d "0" /f >nul 2>&1
-Reg add "HKLM\zSOFTWARE\Policies\Microsoft\EdgeUpdate" /v "RemoveDesktopShortcutDefault" /t REG_DWORD /d "1" /f >nul 2>&1
 echo Tweaking complete!
 echo Unmounting Registry...
 reg unload HKLM\zCOMPONENTS >nul 2>&1
